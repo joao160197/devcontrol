@@ -13,7 +13,7 @@ export default function Home() {
         quality={100}
         width={600}
         height={600}
-        alt="Imagem do Home"
+        alt="Imagem da Home"
         className="max-w-sm md:max-w-xl"
       ></Image>
     </main>
