@@ -58,7 +58,7 @@ export function ClientForm({userId}:{userId: string}) {
         type="text"
         name="name"
         placeholder="Digite o nome completo..."
-        error={errors.name?.message}
+        error={errors.name?.message as string}
         register={register}
       />
 
@@ -72,7 +72,7 @@ export function ClientForm({userId}:{userId: string}) {
             type="text"
             name="phone"
             placeholder="Telefone"
-            error={errors.phone?.message}
+            error={errors.phone?.message as string}
             register={register}
           />
         </div>
@@ -85,7 +85,7 @@ export function ClientForm({userId}:{userId: string}) {
             type="text"
             name="email"
             placeholder="Email"
-            error={errors.email?.message}
+            error={errors.email?.message as string}
             register={register}
           />
         </div>

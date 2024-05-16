@@ -14,9 +14,10 @@ export const metadata: Metadata = {
 
 interface LayoutProps {
   children: React.ReactNode;
+  types: any; 
 }
 
-const RootLayout: React.FC<LayoutProps> = ({ children }) => {
+const RootLayout: React.FC<LayoutProps> = ({ children, types }) => {
   return (
     <html lang="en">
       <body className={inter.className}>
