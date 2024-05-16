@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
-import {AuthProvider} from "@/provider/auth"
+import { AuthProvider } from "@/provider/auth";
 import { ModalProvider } from "@/provider/modal";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,23 +12,23 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface LayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+const RootLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        
         <AuthProvider>
-        <ModalProvider>
-        <Header/>
-        {children}
-        </ModalProvider>
+          <ModalProvider>
+            <Header />
+            {children}
+          </ModalProvider>
         </AuthProvider>
-       
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
